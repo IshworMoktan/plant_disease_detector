@@ -4,6 +4,7 @@ import 'package:plant_disease_detector/services/disease_provider.dart';
 import 'package:plant_disease_detector/src/home_page/home.dart';
 import 'package:plant_disease_detector/src/home_page/models/disease_model.dart';
 import 'package:plant_disease_detector/src/suggestions_page/suggestions.dart';
+import 'package:plant_disease_detector/src/welcome_page/welcomePage.dart';
 import 'package:provider/provider.dart';
 
 Future main() async {
@@ -25,8 +26,11 @@ class MyApp extends StatelessWidget {
       create: (context) => DiseaseService(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Detect diseases',
-        theme: ThemeData(primarySwatch: Colors.green, fontFamily: 'SFRegular'),
+        title: 'GreenScan',
+        theme: ThemeData(
+            primarySwatch: Colors.lightGreen,
+            useMaterial3: true,
+            fontFamily: 'SFRegular'),
         onGenerateRoute: (RouteSettings routeSettings) {
           return MaterialPageRoute<void>(
               settings: routeSettings,

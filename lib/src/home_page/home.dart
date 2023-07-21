@@ -10,6 +10,7 @@ import 'package:plant_disease_detector/services/hive_database.dart';
 import 'package:plant_disease_detector/src/home_page/components/greeting.dart';
 import 'package:plant_disease_detector/src/home_page/components/history.dart';
 import 'package:plant_disease_detector/src/home_page/components/instructions.dart';
+import 'package:plant_disease_detector/src/home_page/components/takepicture.dart';
 import 'package:plant_disease_detector/src/home_page/components/titlesection.dart';
 import 'package:plant_disease_detector/src/home_page/models/disease_model.dart';
 import 'package:plant_disease_detector/src/suggestions_page/suggestions.dart';
@@ -45,9 +46,26 @@ class _HomeState extends State<Home> {
     late Disease _disease;
 
     return Scaffold(
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        foregroundColor: kMain,
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leadingWidth: 50,
+        leading: Image.asset('assets/images/logo.png'),
+        title: Text(
+          'GreenScan',
+          style: TextStyle(fontFamily: 'SFBold', fontSize: 30, color: kMain),
+        ),
+      ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: SpeedDial(
-        icon: Icons.camera_alt,
+        backgroundColor: Colors.white70,
+        animatedIconTheme: IconThemeData(size: 28.0),
+        elevation: 30,
+        tooltip: 'Diagnose',
+        label: const Text('Diagnose'),
+        icon: Icons.camera,
         spacing: 10,
         children: [
           SpeedDialChild(
@@ -55,7 +73,7 @@ class _HomeState extends State<Home> {
               FontAwesomeIcons.file,
               color: kWhite,
             ),
-            label: "Choose image",
+            label: "Upload image",
             backgroundColor: kMain,
             onTap: () async {
               late double _confidence;
@@ -80,7 +98,6 @@ class _HomeState extends State<Home> {
                 );
               } else {
                 // Display unsure message
-
               }
             },
           ),
@@ -116,7 +133,6 @@ class _HomeState extends State<Home> {
                 );
               } else {
                 // Display unsure message
-
               }
             },
           ),
@@ -125,15 +141,17 @@ class _HomeState extends State<Home> {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('assets/images/bg.jpg'), fit: BoxFit.cover),
+              image: AssetImage('assets/images/bg.png'), fit: BoxFit.cover),
         ),
         child: CustomScrollView(
           slivers: [
-            GreetingSection(size.height * 0.2),
-            TitleSection('Instructions', size.height * 0.066),
-            InstructionsSection(size),
+            //GreetingSection(size.height * 0.2),
+            TitleSection('', size.height * 0.1),
             TitleSection('Your History', size.height * 0.066),
-            HistorySection(size, context, _diseaseService)
+            HistorySection(size, context, _diseaseService),
+            TitleSection('Instructions', size.height * 0.066),
+            TakePictureSection(),
+            InstructionsSection(size),
           ],
         ),
       ),

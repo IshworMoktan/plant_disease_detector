@@ -1,4 +1,4 @@
-package com.example.plant_disease_detection
+package com.example.greenscan
 
 import io.flutter.embedding.android.FlutterActivity
 

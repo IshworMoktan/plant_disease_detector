@@ -22,14 +22,15 @@ class Suggestions extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
-        backgroundColor: kMain,
+        backgroundColor: Colors.transparent,
         title: const Text('Suggestions'),
       ),
       body: Container(
           decoration: const BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/images/bgr.jpg'), fit: BoxFit.cover),
+                image: AssetImage('assets/images/bg.png'), fit: BoxFit.cover),
           ),
           child: Padding(
             padding: EdgeInsets.all((0.02 * size.height)),
