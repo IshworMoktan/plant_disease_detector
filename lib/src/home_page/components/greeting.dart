@@ -12,7 +12,15 @@ class GreetingSection extends SliverFixedExtentList {
                     (0.079 * height), 0, (0.079 * height), (0.079 * height)),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: kWhite,
+                    gradient: const LinearGradient(
+                      colors: [
+                        Color.fromARGB(255, 36, 152, 138),
+                        Color(0xffe4f3e4)
+                      ],
+                      stops: [0, 1],
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                    ),
                     borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular((0.079 * height)),
                         bottomRight: Radius.circular((0.079 * height))),
@@ -21,24 +29,42 @@ class GreetingSection extends SliverFixedExtentList {
                     padding: EdgeInsets.fromLTRB(
                         (0.092 * height), 0, 0, (0.099 * height)),
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            SizedBox(
-                                height: 120,
-                                width: 80,
-                                child: Image.asset(
-                                  'assets/images/logo.png',
-                                  color: Colors.green,
-                                )),
+                            // SizedBox(
+                            //     height: 120,
+                            //     child: Image.asset(
+                            //       'assets/images/logo.png',
+                            //     )),
+                            // const SizedBox(
+                            //   width: 10,
+                            // ),
                             Text(
                               'GreenScan',
                               style: TextStyle(
                                   fontFamily: 'SFBold',
                                   fontSize: (0.2 * height),
-                                  color: kMain),
+                                  color: kWhite),
+                            ),
+                          ],
+                        ),
+                        const Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            // SizedBox(
+                            //     height: 120,
+                            //     child: Image.asset(
+                            //       'assets/images/logo.png',
+                            //     )),
+                            // const SizedBox(
+                            //   width: 10,
+                            // ),
+                            Text(
+                              'Your digital plant pathologist',
+                              style: TextStyle(fontSize: 15, color: kWhite),
                             ),
                           ],
                         ),

@@ -46,6 +46,18 @@ class InstructionsSection extends SliverFixedExtentList {
                             ),
                           ),
                           title: Text(
+                              'Send the proper captured photo for diagnose',
+                              style: TextStyle(color: kWhite)),
+                        ),
+                        ListTile(
+                          leading: CircleAvatar(
+                            backgroundColor: kMain,
+                            child: Text(
+                              '3',
+                              style: TextStyle(color: kWhite),
+                            ),
+                          ),
+                          title: Text(
                               'Give it a short while before you can get a suggestion of the disease',
                               style: TextStyle(color: kWhite)),
                         ),

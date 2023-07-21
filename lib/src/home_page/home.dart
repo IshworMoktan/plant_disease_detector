@@ -46,21 +46,21 @@ class _HomeState extends State<Home> {
     late Disease _disease;
 
     return Scaffold(
-      extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        foregroundColor: kMain,
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        leadingWidth: 50,
-        leading: Image.asset('assets/images/logo.png'),
-        title: Text(
-          'GreenScan',
-          style: TextStyle(fontFamily: 'SFBold', fontSize: 30, color: kMain),
-        ),
-      ),
+      // extendBodyBehindAppBar: true,
+      // appBar: AppBar(
+      //   foregroundColor: kMain,
+      //   backgroundColor: Colors.transparent,
+      //   elevation: 0,
+      //   leadingWidth: 50,
+      //   leading: Image.asset('assets/images/logo.png'),
+      //   title: Text(
+      //     'GreenScan',
+      //     style: TextStyle(fontFamily: 'SFBold', fontSize: 30, color: kMain),
+      //   ),
+      // ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: SpeedDial(
-        backgroundColor: Colors.white70,
+        backgroundColor: const Color.fromARGB(255, 206, 239, 169),
         animatedIconTheme: IconThemeData(size: 28.0),
         elevation: 30,
         tooltip: 'Diagnose',
@@ -141,15 +141,15 @@ class _HomeState extends State<Home> {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('assets/images/bg.png'), fit: BoxFit.cover),
+              image: AssetImage('assets/images/bgr.jpg'), fit: BoxFit.cover),
         ),
         child: CustomScrollView(
           slivers: [
-            //GreetingSection(size.height * 0.2),
-            TitleSection('', size.height * 0.1),
-            TitleSection('Your History', size.height * 0.066),
+            GreetingSection(size.height * 0.2),
+            // TitleSection('', size.height * 0.1),
+            TitleSection('  Your Report History', size.height * 0.044),
             HistorySection(size, context, _diseaseService),
-            TitleSection('Instructions', size.height * 0.066),
+            TitleSection('  Guide', size.height * 0.044),
             TakePictureSection(),
             InstructionsSection(size),
           ],
