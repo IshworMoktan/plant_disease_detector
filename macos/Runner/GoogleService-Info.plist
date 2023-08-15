@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>618604349971-4a4drq9lj7ldb9mdm0lcjb1vv05lit8g.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.618604349971-4a4drq9lj7ldb9mdm0lcjb1vv05lit8g</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCUXiplCW0W6id7qyLGjZulOakTWaIDWu0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>618604349971</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.plantDiseaseDetection.RunnerTests</string>
+	<key>PROJECT_ID</key>
+	<string>greenscan-be468</string>
+	<key>STORAGE_BUCKET</key>
+	<string>greenscan-be468.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:618604349971:ios:739f14a9174a9dbefc8de6</string>
+</dict>
+</plist>

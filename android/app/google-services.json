@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "618604349971",
+    "project_id": "greenscan-be468",
+    "storage_bucket": "greenscan-be468.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:618604349971:android:570527a628f74542fc8de6",
+        "android_client_info": {
+          "package_name": "com.example.greenscan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "618604349971-fcojbr20bj6vc39fb5udp7i0cs28cu8s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnPF89YKz1ALTDb5PZndPXNrx5xUEHdpI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "618604349971-fcojbr20bj6vc39fb5udp7i0cs28cu8s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
