@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:plant_disease_detector/services/disease_provider.dart';
+import 'package:plant_disease_detector/src/app_drawer/app_drawer.dart';
 import 'package:plant_disease_detector/src/auth_page/auth_page.dart';
 import 'package:plant_disease_detector/src/auth_page/login_page.dart';
 import 'package:plant_disease_detector/src/home_page/home.dart';
@@ -38,19 +39,19 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.lightGreen,
             useMaterial3: true,
             fontFamily: 'SFRegular'),
-        // onGenerateRoute: (RouteSettings routeSettings) {
-        //   return MaterialPageRoute<void>(
-        //       settings: routeSettings,
-        //       builder: (BuildContext context) {
-        //         switch (routeSettings.name) {
-        //           case Suggestions.routeName:
-        //             return const Suggestions();
-        //           case Home.routeName:
-        //           default:
-        //             return const Home();
-        //         }
-        //       });
-        // },
+        onGenerateRoute: (RouteSettings routeSettings) {
+          return MaterialPageRoute<void>(
+              settings: routeSettings,
+              builder: (BuildContext context) {
+                switch (routeSettings.name) {
+                  case Suggestions.routeName:
+                    return const Suggestions();
+                  case Home.routeName:
+                  default:
+                    return const Home();
+                }
+              });
+        },
         home: const AuthPage(),
       ),
     );

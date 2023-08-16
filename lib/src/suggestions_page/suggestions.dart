@@ -13,7 +13,7 @@ import '../../components/text_property.dart';
 class Suggestions extends StatelessWidget {
   const Suggestions({Key? key}) : super(key: key);
 
-  static const routeName = '/suggestions';
+  static const routeName = '/src/suggestions_page/suggestions';
 
   @override
   Widget build(BuildContext context) {

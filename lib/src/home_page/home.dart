@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hive/hive.dart';
+import 'package:hive_flutter/adapters.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:liquid_pull_to_refresh/liquid_pull_to_refresh.dart';
 import 'package:plant_disease_detector/constants/constants.dart';
@@ -134,52 +135,53 @@ class _HomeState extends State<Home> {
           image: DecorationImage(
               image: AssetImage('assets/images/bgr.jpg'), fit: BoxFit.cover),
         ),
-        child: LiquidPullToRefresh(
-          showChildOpacityTransition: false,
-          color: const Color.fromARGB(255, 36, 152, 138),
-          onRefresh: _handleRefresh,
-          child: CustomScrollView(
-            slivers: [
-              SliverAppBar(
-                pinned: false,
-                flexibleSpace: Container(
-                  decoration: const BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [
-                        Color.fromARGB(255, 36, 152, 138),
-                        Color(0xffe4f3e4)
-                      ],
-                      stops: [0, 1],
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                    ),
+        // child:
+        // LiquidPullToRefresh(
+        //   showChildOpacityTransition: false,
+        //   color: const Color.fromARGB(255, 36, 152, 138),
+        //   onRefresh: _handleRefresh,
+        child: CustomScrollView(
+          slivers: [
+            SliverAppBar(
+              pinned: false,
+              flexibleSpace: Container(
+                decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [
+                      Color.fromARGB(255, 36, 152, 138),
+                      Color(0xffe4f3e4)
+                    ],
+                    stops: [0, 1],
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
                   ),
                 ),
-                leading: const Icon(Icons.menu),
-                expandedHeight: 100,
-                centerTitle: true,
-                title: const Column(
-                  children: [
-                    Text(
-                      'GreenScan',
-                      style: TextStyle(
-                          fontFamily: 'SFBold', fontSize: (30), color: kWhite),
-                    ),
-                    Text(
-                      'Your digital plant pathologist',
-                      style: TextStyle(fontSize: 10, color: kWhite),
-                    ),
-                  ],
-                ),
               ),
-              TitleSection('  Your Report History', size.height * 0.044),
-              HistorySection(size, context, _diseaseService),
-              TitleSection('  Guide', size.height * 0.044),
-              TakePictureSection(),
-              InstructionsSection(size),
-            ],
-          ),
+              leading: const Icon(Icons.menu),
+              expandedHeight: 100,
+              centerTitle: true,
+              title: const Column(
+                children: [
+                  Text(
+                    'GreenScan',
+                    style: TextStyle(
+                        fontFamily: 'SFBold', fontSize: (30), color: kWhite),
+                  ),
+                  Text(
+                    'Your digital plant pathologist',
+                    style: TextStyle(fontSize: 10, color: kWhite),
+                  ),
+                ],
+              ),
+            ),
+            TitleSection('  Your Report History', size.height * 0.044),
+            HistorySection(size, context, _diseaseService),
+            TitleSection('  Guide', size.height * 0.044),
+            TakePictureSection(),
+            InstructionsSection(size),
+          ],
         ),
+        //  ),
       ),
     );
   }
